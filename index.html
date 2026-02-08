@@ -19,10 +19,17 @@ body {
         url('background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 
     font-family:'Inter', sans-serif;
     color:#24313a;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
 }
 
 /* Hero Section */
