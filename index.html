@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +10,10 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Elegant Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<!-- Fonts -->
 
-    
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
 <style>
 
 body {
@@ -25,22 +27,22 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
 
-    font-family:'Inter', sans-serif;
+    /* TYPEWRITER LOOK */
+    font-family:'Courier Prime', monospace;
     color:#24313a;
 }
 
+/* Mobile background fix */
 @media (max-width: 768px) {
     body {
         background-size: contain;
         background-position: top center;
-        background-attachment: scroll; /* better mobile performance */
     }
 }
 
-/* Hero Section */
-/* Hero Section */
+/* Header */
 header {
-  background: none;        /* removes colored band */
+  background: none;
   padding: 90px 20px;
   text-align: center;
 }
@@ -53,54 +55,60 @@ header h1 {
 
 header p {
     font-size:18px;
-    color:#555;
+    color:#444;
 }
 
-/* Navigation styling */
+/* Menu icon */
+.menu-toggle {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Navigation panel */
 nav {
-    margin-top: 25px;
-    border-top: 1px solid #ccc;
-    padding-top: 12px;
+    display:none;
+    text-align:right;
+    margin-top:20px;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    font-size: 16px;
+    display:block;
+    padding:8px 0;
+    text-decoration:none;
+    color:#333;
+    font-size:18px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration:underline;
 }
-    
-/* Section Base */
+
+nav.show {
+    display:block;
+}
+
+/* Sections */
 section {
     max-width:900px;
     margin:50px auto;
     padding:30px;
     border-radius:22px;
 
-    /* Grey frosted glass */
     background: rgba(210,220,230,0.20);
 
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(10px);
 
     border: 1px solid rgba(255,255,255,0.35);
-
     box-shadow: 0 12px 35px rgba(0,0,0,0.18);
 }
-
 
 h2 {
     font-family:'Playfair Display', serif;
     margin-top:0;
-}
-
-ul {
-    padding-left:18px;
 }
 
 /* Artistic tilt */
@@ -117,61 +125,22 @@ footer {
     color:#777;
 }
 
-/* Menu icon */
-.menu-toggle {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Navigation panel */
-nav {
-    display: none;
-    text-align: right;
-    margin-top: 20px;
-}
-
-/* Nav links */
-nav a {
-    display: block;
-    padding: 8px 0;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-/* When active */
-nav.show {
-    display: block;
-}
-
 </style>
 
 </head>
-    
-<script>
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
 
 <body>
 
 <header>
+
 <h1>Mahesh S</h1>
+
 <p class="tagline">
 Testing Engineer exploring material behaviour and structural performance
 </p>
 
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<!-- Menu Icon -->
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
-
-<!-- Hidden Navigation -->
 <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="Work.html">Work</a>
@@ -179,7 +148,6 @@ Testing Engineer exploring material behaviour and structural performance
     <a href="Publications.html">Publications</a>
     <a href="About.html">About</a>
 </nav>
-
 
 </header>
 
@@ -210,6 +178,12 @@ of mechanical performance.
 <footer>
 © 2026 Mahesh S
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
