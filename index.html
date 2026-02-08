@@ -117,9 +117,45 @@ footer {
     color:#777;
 }
 
+/* Menu icon */
+.menu-toggle {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Navigation panel */
+nav {
+    display: none;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Nav links */
+nav a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* When active */
+nav.show {
+    display: block;
+}
+
 </style>
 
 </head>
+    
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 <body>
 
@@ -127,13 +163,20 @@ footer {
 <h1>Mahesh S</h1>
 <p>Materials Characterization • Microscopy • Fracture Mechanics</p>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="publications.html">Publications</a>
-        <a href="letters.html">Letters</a>
-        <a href="about.html">About</a>
-    </nav>
+<!-- Menu Icon -->
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
+
+<!-- Hidden Navigation -->
+<nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="blog.html">Letters</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">About</a>
+</nav>
+
 
 </header>
 
