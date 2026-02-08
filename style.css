@@ -7,14 +7,17 @@
 
 /* ===== Page Background ===== */
 body {
-    font-family: Georgia, serif;
-    line-height: 1.6;
-    color: #222;
+    font-family: 'Courier Prime', monospace;
 
     background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    color: #111;
+    line-height: 1.7;
+    font-size: 18px;
+    margin: 0;
 }
 
 /* ===== Header ===== */
@@ -82,7 +85,7 @@ footer {
 /* ===== Mobile Background Fix ===== */
 @media (max-width: 768px) {
     body {
-        background-size: contain;
+        background-size: cover;
         background-attachment: scroll;
     }
 
